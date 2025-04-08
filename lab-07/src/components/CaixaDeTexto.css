@@ -1,0 +1,15 @@
+/* estilização da caixa de texto */
+
+.caixa-de-texto {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .caixa-de-texto:focus {
+    border-color: #007bff;
+    outline: none;
+  }

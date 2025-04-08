@@ -1,0 +1,82 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #0000ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+select, button {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #c4d0f0;
+    border: 2px solid rgb(0, 0, 0);
+    color: #000000;
+    cursor: pointer;
+}
+
+button {
+    background-color: #c4d0f0;
+    border: 1.5px solid rgb(0, 0, 0);
+    cursor: pointer;
+    align-items: end;
+    color: #000000;
+}
+
+pre {
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.container {
+    border: 3px solid black;
+    padding: 20px;
+    background: linear-gradient(45deg, #f0e2e8, #6ca6e9);
+    width: 100%;
+    max-width: 600px; 
+    box-sizing: border-box; 
+}
+
+.cidade-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    select, button {
+        font-size: 14px;
+    }
+
+    pre {
+        font-size: 16px;
+    }
+}

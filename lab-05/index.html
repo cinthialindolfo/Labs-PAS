@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dados IBGE</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dados IBGE</h1>
+
+        <h2>Escolha o estado desejado</h2>
+        <select id="select-estados">
+            <option value="default">Carregando estados...</option>
+        </select>
+
+        <h2 id="titulo-cidades" style="display: none;">Escolha a cidade desejada</h2>
+        <div class="cidade-container">
+            <select id="select-cidades" style="display: none;"></select>
+            <button id="botao-ver-mais" style="display: none;">Ver mais</button>
+        </div>
+
+        <pre id="informacoes-cidade" style="display: none;"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

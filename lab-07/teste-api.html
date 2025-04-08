@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste API</title>
+</head>
+<body>
+  <h1>Teste de Envio para a API</h1>
+  <button id="enviar">Enviar Dados</button>
+
+  <script>
+    document.getElementById('enviar').addEventListener('click', async () => {
+      const dados = {
+        nome: 'João',
+        sobrenome: 'Silva',
+        email: 'joao@example.com',
+        senha: '123456',
+      };
+
+      try {
+        const resposta = await fetch('http://localhost:3001/enviar-formulario', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dados),
+        });
+
+        if (resposta.ok) {
+          const resultado = await resposta.json();
+          alert(resultado.mensagem); // Exibe a mensagem da API
+        } else {
+          alert('Erro ao enviar os dados.');
+        }
+      } catch (erro) {
+        console.error('Erro:', erro);
+        alert('Erro ao conectar com a API.');
+      }
+    });
+  </script>
+</body>
+</html>

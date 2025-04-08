@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="./assets/css/base/base.css">
+    <link rel="stylesheet" href="./assets/css/cadastro.css">
+    <link rel="stylesheet" href="./assets/css/componentes/cartao.css">
+    <link rel="stylesheet" href="./assets/css/componentes/inputs.css">
+    <link rel="stylesheet" href="./assets/css/componentes/botao.css">
+</head>
+<body>
+    <main class="container flex flex--coluna flex--centro">
+        <div class="cadastro-cabecalho">
+            <img src="./assets/img/doguito.svg" alt="Logo Doguito" class="cadastro-cabecalho__logo">
+            <h1 class="cadastro-cabecalho__titulo">PetShop</h1>
+        </div>
+        <section class="cartao">
+            <h2 class="cartao__titulo">Cadastro de Produto</h2>
+            <form action="./cadastro_concluido.html" class="formulario flex flex--coluna">
+                <fieldset>
+                    
+                    <div class="input-container">
+                        <input name="nomeProduto" id="nomeProduto" class="input" type="text" placeholder="Nome do Produto" data-tipo="nomeProduto" required>
+                        <label class="input-label" for="nomeProduto">Nome do Produto</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input name="descricao" id="descricao" class="input" type="text" placeholder="Descrição do Produto" data-tipo="descricao" required>
+                        <label class="input-label" for="descricao">Descrição do Produto</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input name="preco" id="preco" class="input" type="text" placeholder="Preço" data-tipo="preco" required>
+                        <label class="input-label" for="preco">Preço</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input name="quantidade" id="quantidade" class="input" type="text" placeholder="Quantidade" data-tipo="quantidade" required>
+                        <label class="input-label" for="quantidade">Quantidade</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+
+                    <div class="input-container">
+                        <input name="validade" id="validade" class="input" type="date" placeholder="Validade" data-tipo="validade" required>
+                        <label class="input-label" for="validade">Validade</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                </fieldset>
+                <button class="botao">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <script src="./js/simple-mask-money.umd.js"></script>
+    <script src="./js/app.js" type="module"></script>
+    <script>
+        SimpleMaskMoney.setMask('#preco', {
+            prefix: 'R$ ',
+            fixed: true,
+            fractionDigits: 2,
+            decimalSeparator: ',',
+            thousandsSeparator: '.',
+            cursor: 'end'
+        });
+
+        const campoPreco = document.querySelector('#preco');
+        campoPreco.addEventListener('input', () => {
+            validaPreco(campoPreco);
+        });
+    </script>
+</body>
+</html>
