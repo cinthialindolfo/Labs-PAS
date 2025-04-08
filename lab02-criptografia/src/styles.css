@@ -1,0 +1,87 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://img.freepik.com/vetores-gratis/fundo-geometrico-abstrato-verde_23-2148373958.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  color: #ffffff;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder {
+  color: #dddddd;
+}
+
+button {
+  background: linear-gradient(135deg, #072b15, #1ce497); /* Cores vibrantes de gradiente para os botões */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff); /* Gradiente invertido ao passar o mouse */
+}
+
+button:active {
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Gradiente normal ao pressionar */
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  input, button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
